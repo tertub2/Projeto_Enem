@@ -42,16 +42,16 @@ Para tanto, foram requisitadas as seguintes condições:
 
 # 1. Leitura dos dados
 
-Por se tratar de um database de 1.8 gb aproximadamente, é necessário realizar a leitura dos dados de uma forma que nao use tanto a memória ram, visto que o máquina utilizada possui apenas 4 GB de Ram. 
+Por se tratar de um database de 1.8 gb aproximadamente, é necessário realizar a leitura dos dados de uma forma que nao use tanto a memória ram, visto que a máquina utilizada possui apenas 4 GB de Ram. 
 
-Assim, foi feita a importação em no MySQL, POSTGRESQL e Microsoft SQL Server, porém em todos eles não foi possível realizar a importação devido a memoria (O menor tempo estimado, dos 3 foi de 12 Horas). Dessa forma, foi usado o Python, mais epecificamente Jupyter notebook a fim de fazer essa importação.
+Assim, foi feita a importação no MySQL, POSTGRESQL e Microsoft SQL Server, porém em todos eles não foi possível realizar a importação devido a memoria (O menor tempo estimado, dos 3 foi de 12 Horas). Dessa forma, foi usado o Python, mais epecificamente Jupyter notebook a fim de fazer essa importação.
 
 Porém ao ser feita esta importação:
 ![image](https://user-images.githubusercontent.com/88055274/196234802-78482e00-93ee-4484-99a8-87546c7fbada.png)
 Ocorreu novamente o erro de memória:
 ![image](https://user-images.githubusercontent.com/88055274/196234731-6cc140e7-2c7d-4075-9e51-05930c2d77f6.png)
 
-Logo, a fim de conseguir impotar este database, foi feita então uma sample, para ser usada neste projeto, a máquina conseguiu ler os dados a partir de 2000000 amostras (linhas), assim foi usada esta:
+Logo, a fim de conseguir importar este database, foi feita então uma sample, para ser usada neste projeto, a máquina conseguiu ler os dados a partir de 2000000 amostras (linhas), assim foi usada esta:
 ![image](https://user-images.githubusercontent.com/88055274/196232944-b9f2c7d9-54d4-4636-acb9-e5ebe0344b70.png)
 ![image](https://user-images.githubusercontent.com/88055274/196233359-cb5bae6a-2727-4c3c-8da0-afe8fc7779e0.png)
 
@@ -62,7 +62,7 @@ Ao analisar os dados, foi visto que não seriam usadas todas as colunas, então 
 # 2. ETL 
 Logo, com isso, foi obtida a leitura e um pouco do drop de dados. Logo, a próxima etapa será exportar esse dados, para um banco de dados, o qual será o MYSQL, para armazenamento desses dados de forma mais fluida e segura, uma vez que segundo Junior (2021) este é um software que tem como característica:
 
-**1.Ser muitop popular**
+**1.Ser muito popular**
 
 **2.Ser flexível**
 
@@ -88,7 +88,7 @@ Após, é criado o engine, que possui:
 
 **projeto_enem**: Nome do banco de dados
 
-Com a conexão, pode-se estabeelcar a conexão com df.to_sql
+Com a conexão, pode-se ter a conexão com df.to_sql
 ![image](https://user-images.githubusercontent.com/88055274/196235805-1e105d69-1169-4f99-add5-40a276dd2a59.png)
 
 No SQL, foi feito o **ETL**, da seguinte maneira:  O arquivo CSV, que foi lido antes como dataframe no pandas, é exportado como tabela banco de dados (*Extraction*), são  criadas algumas consultas pra tratar ou criar métricas (*transform*), e criar novas tabelas com base nessas consultas (*Load*). ETL = Extract, Transform & Load. Desta maneira, são criadas as tabelas a partir da base, advinda do CSV
@@ -101,7 +101,7 @@ Já para tabela, é a tabela que possui a contagem de inscritos por cada estado:
 A segunda tabela, é o perfil social dos alunos com a nota abaixo da média, para tanto deve ser criada uma tabela de consulta antes:
 ![image](https://user-images.githubusercontent.com/88055274/196251215-88d3e68e-c84d-48d4-907c-8ffb90bbdbc7.png)
 
-A terceira, se trata da tabela que apersenta a média das melhoras escolas, no quesito nota
+A terceira, se trata da tabela que apresenta a média das melhoras escolas, no quesito nota
 ![image](https://user-images.githubusercontent.com/88055274/196252347-5ab2afc0-c1da-43b7-adb9-2d409dbbdef3.png)
 
 Após estas consultas, é feita a importação dos dados para o BI utilizando a opção do MYSQL
