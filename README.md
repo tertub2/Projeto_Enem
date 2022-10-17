@@ -6,9 +6,9 @@ Projeto referente ao processo seletivo da Mesha Tecnologia da unidade Maceió.
 
 Nesse projeto, foi objetivado a **Análise dos microdados do Exame Nacional do Ensino Médio (ENEM)** de cada participate, sendo desta da edição 2020.
 
-Logo, os dados foram disponibilizados, jutamente como dicionário deles, estes podem ser vistos na pasta *Dados*. 
+Logo, os dados foram disponibilizados, jutamente como dicionário deles, estes podem ser vistos na pasta *Dados* do link:  https://docs.google.com/document/d/1UtS5hPXzrH77_KHT8RneRkpiqHiu1iR9KWb9QuQS3MI/edit 
 
-Para a descrição das variáveis, estas vão ser descritas a medida que elas forem aparecendo no projeto.
+Além disso, todos os arquivos usados no projeto estão no link acima.
 
 # Foco do projeto
 
@@ -86,7 +86,7 @@ Após, é criado o engine, que possui:
 
 **@127.0.0.1:3307**: IP
 
-**5.projeto_enem**: Nome do banco de dados
+**projeto_enem**: Nome do banco de dados
 
 Com a conexão, pode-se estabeelcar a conexão com df.to_sql
 ![image](https://user-images.githubusercontent.com/88055274/196235805-1e105d69-1169-4f99-add5-40a276dd2a59.png)
@@ -129,9 +129,50 @@ Para a realização do Dashboard, são feitas métricas necessárias para a real
 
 ![image](https://user-images.githubusercontent.com/88055274/196256080-4b71b50c-2d8f-45aa-9db6-07604e257a5d.png)
 
-Assim, com as métricas e os cálculos das outras tabelas, pode-se preencher o layout e realizar o dashboard, que segue no link do drive:
-https://drive.google.com/drive/u/0/folders/1tL3c-TI7jnJbXgjPr3o9DllFtkxckiYA
+## Documentação das medidas
 
-## REFERÊNCIA
+**Geral**: Média geral do ENEM 2020
+
+**Humanas**: Média geral de Ciências Humanas 
+
+**Linguagens**: Média geral de Linguagens 
+
+**Matemática**: Média geral de Matemática 
+
+**Ciências da Natureza**: Média geral de Ciências da Natureza 
+
+**Redação**: Média geral de Redação 
+
+**Contagem de faltantes**: Contagem dos faltantes 
+
+**Inscritos**: Média geral de Redação 
+
+**Porcentagem de faltantes**: Média geral de Redação 
+
+Assim, com as métricas e os cálculos das outras tabelas, pode-se preencher o layout e realizar o dashboard, que segue no link do drive:
+https://drive.google.com/drive/u/0/folders/1tL3c-TI7jnJbXgjPr3o9DllFtkxckiYA ou através do link público:  https://app.powerbi.com/view?r=eyJrIjoiNDE0NzkwZTctYTk3OS00ZTMwLThlOTctYzQ5NjU5M2QxNjY1IiwidCI6Ijg1MDA4MzQ1LWRhNTMtNGJjYy1iMzc3LWU1NTFjM2FhMDllZSJ9 
+
+# Conclusões
+
+• **Total de inscritos de 2 milhões, com mais da metade dos participantes ausentes (55,06%)**
+
+• **A média geral do ENEM 2020 foi 523.95 e as notas de CN, CH, linguagens, matemática e redação são 490.45, 511.27, 523.89, 520.72 e 573.41 respectivamente**
+
+• **O perfil para alunos que tiveram nota média menor que a média geral varia muito**
+
+• **Os 3 estados com maiores inscrições são São Paulo, Minas Gerais e Bahia**
+
+• **A maior nota geral foi 851.0, sendo este estudante do Ceará**
+
+• **O Colégio Estadual Landulfo Alves De Almeida é o colégio com maior média do Brasil tendo o valor de 748.50, sendo este da Bahia**
+
+• **As regiões que possuem um maior número de participações no ranking das 10 melhores escolas, são Sudeste e Nordeste, com 4 escolas cada** 
+
+• **Em Alagoas, o ranking das melhores alunos por disciplina é composto pelas notas: 805.2, 824.9, 725.6, 975 e 1000 das matérias CN, CH, linguagens, matemática e redação respectivamente, já para a maior média de AL, se trata de 815.1** 
+
+• **As regiões que possuem um maior número de participações no ranking das 10 melhores escolas, são Sudeste e Nordeste, com 4 escolas cada** 
+
+
+## Referência
 
 JUNIOR, C. Banco de dados MariaDB e MySQL: vantagens e desvantagens. Porto Fácil. 2021. Disponível em:<https://www.portofacil.net/banco-de-dados-mariadb-e-mysql.html> Acesso em: 17 de Outubro de 2022 
