@@ -72,7 +72,18 @@ Logo, com isso, foi obtida a leitura e um pouco do drop de dados. Logo, a próxi
 **5.Possui alta performance**
 
 Assim para exportar, são usadas as bibliotecas: pymysql, openpyxl e sqlalchemy. Logo, é selecionada a create.engine do sqlalchemy.engine a fim de obter a conexão do Jupyter e SQL. 
+ 
+Após, é criado o engine, que possui:
 
-Depois é criado o engine, 
+**1.Ser muitop popular**
+
+**2.Ser flexível**
+
+**3.Ser muito confiável**
+
+**4.Oferece código estável**
+
+**5.Possui alta performance**
 ![image](https://user-images.githubusercontent.com/88055274/196235805-1e105d69-1169-4f99-add5-40a276dd2a59.png)
 
+Basicamente, jogar o CSV numa tabela banco de dados (Extraction), criar algumas consultas pra tratar ou criar métricas (transform), e criar novas tabelas com base nessas consultas (Load). ETL = Extract, Transform & Load
