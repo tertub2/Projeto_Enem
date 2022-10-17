@@ -1,5 +1,6 @@
 # Projeto Enem
  Projeto Enem 2020 - Processo Seltivo Mesha
+![image](https://user-images.githubusercontent.com/88055274/196243128-97ec51c4-e6f8-4434-be82-853647c3ad32.png)
 
 Projeto referente ao processo seletivo da Mesha Tecnologia da unidade Maceió.
 
@@ -12,7 +13,6 @@ Para a descrição das variáveis, estas vão ser descritas a medida que elas fo
 # Foco do projeto
 
 Realizar uma análise dos microdados do ENEM 2020, a fim de conseguir responder as seguintes perguntas:
-
 
 
 **1.Qual a escola com a maior média de notas?**
@@ -29,7 +29,7 @@ Realizar uma análise dos microdados do ENEM 2020, a fim de conseguir responder 
 
 **7.Qual o perfil dos alunos com as notas abaixo da média? Descreva por sexo, etnia, faixa etária.**
 
-Para tanto, foram requisitadas as seguintes condições
+Para tanto, foram requisitadas as seguintes condições:
 
 **1.Uso de Funções DAX**
 
@@ -75,15 +75,19 @@ Assim para exportar, são usadas as bibliotecas: pymysql, openpyxl e sqlalchemy.
  
 Após, é criado o engine, que possui:
 
-**1.Ser muitop popular**
+**mysql**: Banco de dados
 
-**2.Ser flexível**
+**pymysql**: Conexão com o Banco de Dados
 
-**3.Ser muito confiável**
+**root **: Username
 
-**4.Oferece código estável**
+**bootcamp**: Password
 
-**5.Possui alta performance**
+**@127.0.0.1:3307**: IP
+
+**5.projeto_enem**: Nome do banco de dados
+
+Com a conexão, pode-se estabeelcar a conexão com df.to_sql
 ![image](https://user-images.githubusercontent.com/88055274/196235805-1e105d69-1169-4f99-add5-40a276dd2a59.png)
 
 Basicamente, jogar o CSV numa tabela banco de dados (Extraction), criar algumas consultas pra tratar ou criar métricas (transform), e criar novas tabelas com base nessas consultas (Load). ETL = Extract, Transform & Load
