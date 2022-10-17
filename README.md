@@ -132,6 +132,6 @@ Para a realização do Dashboard, são feitas métricas necessárias para a real
 Assim, com as métricas e os cálculos das outras tabelas, pode-se preencher o layout e realizar o dashboard, que segue no link do drive:
 https://drive.google.com/drive/u/0/folders/1tL3c-TI7jnJbXgjPr3o9DllFtkxckiYA
 
-# *REFERÊNCIA*
+## REFERÊNCIA
 
 JUNIOR, C. Banco de dados MariaDB e MySQL: vantagens e desvantagens. Porto Fácil. 2021. Disponível em:<https://www.portofacil.net/banco-de-dados-mariadb-e-mysql.html> Acesso em: 17 de Outubro de 2022 
