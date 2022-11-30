@@ -1,43 +1,41 @@
-# Projeto Enem
- Projeto Enem 2020 - Processo Seltivo Mesha
+# Enem Project
+
 ![image](https://user-images.githubusercontent.com/88055274/196243128-97ec51c4-e6f8-4434-be82-853647c3ad32.png)
 
-Projeto referente ao processo seletivo da Mesha Tecnologia da unidade Maceió.
+In this project, the goal was the **Analysis of the microdata from the National High School Exam (ENEM)** of each participant, for the 2020 edition.
 
-Nesse projeto, foi objetivado a **Análise dos microdados do Exame Nacional do Ensino Médio (ENEM)** de cada participate, sendo desta da edição 2020.
+Soon, the data were made available, along with their dictionary, which can be seen in the *Data* folder at the link:  [https://docs.google.com/document/d/1UtS5hPXzrH77_KHT8RneRkpiqHiu1iR9KWb9QuQS3MI/edit](https://drive.google.com/drive/u/0/folders/1tL3c-TI7jnJbXgjPr3o9DllFtkxckiYA) 
 
-Logo, os dados foram disponibilizados, jutamente como dicionário deles, estes podem ser vistos na pasta *Dados* do link:  [https://docs.google.com/document/d/1UtS5hPXzrH77_KHT8RneRkpiqHiu1iR9KWb9QuQS3MI/edit](https://drive.google.com/drive/u/0/folders/1tL3c-TI7jnJbXgjPr3o9DllFtkxckiYA) 
+Also, all the files used in the project are at the link above
 
-Além disso, todos os arquivos usados no projeto estão no link acima.
+# Project focus
 
-# Foco do projeto
-
-Realizar uma análise dos microdados do ENEM 2020, a fim de conseguir responder as seguintes perguntas:
+Perform an analysis of the microdata from ENEM 2020, in order to be able to answer the following questions:
 
 
-**1.Qual a escola com a maior média de notas?**
+**1.Which school has the highest average score?**
 
-**2.Qual o aluno com a maior média de notas e o valor dessa média?**
+**Which student has the highest average score and the value of this average?
 
-**3.Qual a média geral?**
+**What is the GPA?
 
-**4.Qual o % de Ausentes?**
+**What is the % of absentees?
 
-**5.Qual o número total de Inscritos?**
+**What is the % of Absentees?** 5.
 
-**6.Qual é o Ranking dos melhores alunos de Alagoas por disciplina?**
+**What is the ranking of the best students in Alagoas by discipline?
 
-**7.Qual o perfil dos alunos com as notas abaixo da média? Descreva por sexo, etnia, faixa etária.**
+**What is the profile of the students with below average grades? Describe by sex, ethnicity, age group.
 
-Para tanto, foram requisitadas as seguintes condições:
+For this, the following conditions were requested:
 
-**1.Uso de Funções DAX**
+**1.Use of DAX Functions**
 
-**2.Documentação das medidas**
+**2.Documentation of the measurements
 
 **3.ETL**
 
-**4.Modelagem dimensional dos dados**
+**4.Dimensional modeling of the data**
 
 
 # 1. Leitura dos dados
