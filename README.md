@@ -169,7 +169,7 @@ https://drive.google.com/drive/u/0/folders/1tL3c-TI7jnJbXgjPr3o9DllFtkxckiYA or 
 
 - **The regions with the largest number of schools in the top 10 are the Southeast and the Northeast, with 4 schools each**. 
 
-- **In Alagoas, the ranking of the best students by subject is composed of the following scores: 805.2, 824.9, 725.6, 975 and 1000 of the subjects CN, CH, languages, mathematics and writing, respectively. 
+- **In Alagoas, the ranking of the best students by subject is composed of the following scores: 805.2, 824.9, 725.6, 975 and 1000 of the subjects CN, CH, languages, mathematics and writing, respectively.** 
 
 - **The regions with the greatest number of schools in the top 10 are the Southeast and Northeast, with 4 schools each** 
 
