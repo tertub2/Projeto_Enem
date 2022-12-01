@@ -2,6 +2,11 @@
 
 ![image](https://user-images.githubusercontent.com/88055274/196243128-97ec51c4-e6f8-4434-be82-853647c3ad32.png)
 
+The National High School Exam (Enem) was instituted in 1998 by the Brazilian Ministry of Education to evaluate the performance of students at the end of basic education. In 2009, the exam improved its methodology and began to be used as a mechanism for access to higher education, which can be used for admission to universities throughout the country and even to universities abroad.
+ 
+For more information: https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem.
+
+
 In this project, the goal was the **Analysis of the microdata from the National High School Exam (ENEM)** of each participant, for the 2020 edition.
 
 Soon, the data were made available, along with their dictionary, which can be seen in the *Data* folder at the link:  [https://docs.google.com/document/d/1UtS5hPXzrH77_KHT8RneRkpiqHiu1iR9KWb9QuQS3MI/edit](https://drive.google.com/drive/u/0/folders/1tL3c-TI7jnJbXgjPr3o9DllFtkxckiYA) 
