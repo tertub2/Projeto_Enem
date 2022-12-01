@@ -36,141 +36,139 @@ For this, the following conditions were requested:
 **3.ETL**
 
 **4.Dimensional modeling of the data**
+# 1. reading the data
 
+Because it is a database of 1.8 gb approximately, it is necessary to read the data in a way that does not use so much ram memory, since the machine used has only 4 GB of ram. 
 
-# 1. Leitura dos dados
+So, the importation was done in MySQL, POSTGRESQL and Microsoft SQL Server, but in all of them it was not possible to perform the importation due to the memory (the shortest estimated time, of the 3, was 12 Hours). So, Python was used, more specifically Jupyter notebook in order to do this importation.
 
-Por se tratar de um database de 1.8 gb aproximadamente, é necessário realizar a leitura dos dados de uma forma que nao use tanto a memória ram, visto que a máquina utilizada possui apenas 4 GB de Ram. 
-
-Assim, foi feita a importação no MySQL, POSTGRESQL e Microsoft SQL Server, porém em todos eles não foi possível realizar a importação devido a memoria (O menor tempo estimado, dos 3 foi de 12 Horas). Dessa forma, foi usado o Python, mais epecificamente Jupyter notebook a fim de fazer essa importação.
-
-Porém ao ser feita esta importação:
+However, when this import was made
 ![image](https://user-images.githubusercontent.com/88055274/196234802-78482e00-93ee-4484-99a8-87546c7fbada.png)
-Ocorreu novamente o erro de memória:
+The memory error occurred again:
 ![image](https://user-images.githubusercontent.com/88055274/196234731-6cc140e7-2c7d-4075-9e51-05930c2d77f6.png)
 
-Logo, a fim de conseguir importar este database, foi feita então uma sample, para ser usada neste projeto, a máquina conseguiu ler os dados a partir de 2000000 amostras (linhas), assim foi usada esta:
+So, in order to import this database, a sample was made, to be used in this project, the machine could read the data from 2000000 samples (lines), so this was used:
 ![image](https://user-images.githubusercontent.com/88055274/196232944-b9f2c7d9-54d4-4636-acb9-e5ebe0344b70.png)
 ![image](https://user-images.githubusercontent.com/88055274/196233359-cb5bae6a-2727-4c3c-8da0-afe8fc7779e0.png)
 
-Ao analisar os dados, foi visto que não seriam usadas todas as colunas, então algumas foram dropadas, abaixando o número de columns para 36, deixando bem mais leve.
+When analyzing the data, it was seen that not all columns would be used, so some were dropped, lowering the number of columns to 36, making it much lighter.
 ![image](https://user-images.githubusercontent.com/88055274/196233053-ad9a6cc3-b286-44d7-a589-a6e0580f2616.png)
 ![image](https://user-images.githubusercontent.com/88055274/196233198-ed8f82f4-8daf-45af-9f0d-93a2e7d884be.png)
 
 # 2. ETL 
-Logo, com isso, foi obtida a leitura e um pouco do drop de dados. Logo, a próxima etapa será exportar esse dados, para um banco de dados, o qual será o MYSQL, para armazenamento desses dados de forma mais fluida e segura, uma vez que segundo Junior (2021) este é um software que tem como característica:
+So, with this, we got the read and some of the drop data. Then, the next step will be to export this data to a database, which will be MySQL, to store these data in a more fluid and secure way, since according to Junior (2021) this is a software that has as a characteristic:
 
-**1.Ser muito popular**
+**1.Being very popular**
 
-**2.Ser flexível**
+**To be flexible**
 
-**3.Ser muito confiável**
+**3. be very reliable**
 
-**4.Oferece código estável**
+**4. it offers stable code**
 
-**5.Possui alta performance**
+**5. it has high performance**
 
-Assim para exportar, são usadas as bibliotecas: pymysql, openpyxl e sqlalchemy. Logo, é selecionada a create.engine do sqlalchemy.engine a fim de obter a conexão do Jupyter e SQL. 
+So for exporting, the following libraries are used: pymysql, openpyxl and sqlalchemy. Then the create.engine of sqlalchemy.engine is selected in order to get the Jupyter and SQL connection. 
  
-Após, é criado o engine, que possui:
+Then the engine is created, which has:
 
-**mysql**: Banco de dados
+**mysql**: Database
 
-**pymysql**: Conexão com o Banco de Dados
+**pymysql**: Database connection
 
-**root **: Username
+**root**: Username
 
 **bootcamp**: Password
 
 **@127.0.0.1:3307**: IP
 
-**projeto_enem**: Nome do banco de dados
+**project_enem**: Database name
 
-Com a conexão, pode-se ter a conexão com df.to_sql
+With the connection, you can have the connection with df.to_sql
 ![image](https://user-images.githubusercontent.com/88055274/196235805-1e105d69-1169-4f99-add5-40a276dd2a59.png)
 
-No SQL, foi feito o **ETL**, da seguinte maneira:  O arquivo CSV, que foi lido antes como dataframe no pandas, é exportado como tabela banco de dados (*Extraction*), são  criadas algumas consultas pra tratar ou criar métricas (*transform*), e criar novas tabelas com base nessas consultas (*Load*). ETL = Extract, Transform & Load. Desta maneira, são criadas as tabelas a partir da base, advinda do CSV
+In SQL, the **ETL** was done, as follows: The CSV file, that was read before as dataframe in pandas, is exported as database table (*Extraction*), some queries are created to handle or create metrics (*transform*), and new tables are created based on these queries (*Load*). ETL = Extract, Transform & Load. This way, the tables are created from the base, coming from CSV
 
-Para a primeira, consulta, é feito o teste do banco a fim de observar a funcionalidade do mesmo.
+For the first query, the bank is tested in order to observe its functionality.
 
-Já para tabela, é a tabela que possui a contagem de inscritos por cada estado:
+As for the table, it is the table that has the count of subscribers for each state:
 ![image](https://user-images.githubusercontent.com/88055274/196250832-08f13076-2f8a-4499-a297-4ac0206bf7b4.png)
 
-A segunda tabela, é o perfil social dos alunos com a nota abaixo da média, para tanto deve ser criada uma tabela de consulta antes:
+The second table, is the social profile of the students with below average grades, for this a lookup table must be created first:
 ![image](https://user-images.githubusercontent.com/88055274/196251215-88d3e68e-c84d-48d4-907c-8ffb90bbdbc7.png)
 
-A terceira, se trata da tabela que apresenta a média das melhoras escolas, no quesito nota
+The third, is the table that presents the average of the best schools, in terms of grade
 ![image](https://user-images.githubusercontent.com/88055274/196252347-5ab2afc0-c1da-43b7-adb9-2d409dbbdef3.png)
 
-Após estas consultas, é feita a importação dos dados para o BI utilizando a opção do MYSQL
+After these queries, the data are imported into the BI using the MySQL option
 ![image](https://user-images.githubusercontent.com/88055274/196253044-7c117aff-23c1-4c40-9cf8-d5d032c7e9ac.png)
 
-# 3. Modelagem do Banco
+# 3. database modeling
 
-A modelagem é na parte de modelagem do Power BI, devido a facilidade do mesmo, esta: 
+Modeling is in the modeling part of Power BI, due to the ease of it, this: 
 ![image](https://user-images.githubusercontent.com/88055274/196253765-55487df5-370a-4584-8660-8c9d1274fbd2.png)
 
-Para o relacionamento com a tabela Inscritos por Estado é feita através da Unidade Federativa:
+The relationship with the table Enrolled by State is done through the Federative Unit:
 ![image](https://user-images.githubusercontent.com/88055274/196254005-25625ba5-eafd-406f-b9ea-c380673cf4b9.png)
 
-Já para a tabela Melhores escolas é feita através da Nota Final de cada aluno, e esta faz um join com a tabela Estados:
+For the Best Schools table the relationship is made through the Final Grade of each student, and this one makes a join with the table States:
 ![image](https://user-images.githubusercontent.com/88055274/196255083-41973a77-7225-4883-b727-f581271cb61b.png)
 
-No lado direito, há a conexão com Perfil Abaixo da Média, através da Nota Final:
+On the right side, there is the connection with the Below Average Profile, through the Final Grade:
 ![image](https://user-images.githubusercontent.com/88055274/196255277-929a16df-7e61-4563-8133-4c0591d5dd04.png)
 
 # 4. Dashboard
 
-Antes, é alocado o layout do Dashboard, feito anteriormete no Microsoft PowerPoint, o qual se encontra em *Layout*
+First, the layout of the Dashboard, previously made in Microsoft PowerPoint, is allocated, which can be found under *Layout*.
 
-Para a realização do Dashboard, são feitas métricas necessárias para a realização deste:
+Metrics necessary for the realization of the Dashboard are made:
 
 ![image](https://user-images.githubusercontent.com/88055274/196256080-4b71b50c-2d8f-45aa-9db6-07604e257a5d.png)
 
-## Documentação das medidas
+## Measurement documentation
 
-**Geral**: Média geral do ENEM 2020
+**General**: Overall average of ENEM 2020
 
-**Humanas**: Média geral de Ciências Humanas 
+**Humanities**: Overall average of Humanities 
 
-**Linguagens**: Média geral de Linguagens 
+**Languages**: Language overall average 
 
-**Matemática**: Média geral de Matemática 
+**Mathematics**: Mathematics overall grade point average 
 
-**Ciências da Natureza**: Média geral de Ciências da Natureza 
+**Nature Science**: Overall average for Nature Science 
 
-**Redação**: Média geral de Redação 
+**Writing: Writing overall grade point average 
 
-**Contagem de faltantes**: Contagem dos faltantes 
+**Missing Counts**: Missing Counts 
 
-**Inscritos**: Média geral de Redação 
+**Writing**: Overall average for Writing 
 
-**Porcentagem de faltantes**: Média geral de Redação 
+**Percentage of Missing**: Overall average of Writing 
 
-Assim, com as métricas e os cálculos das outras tabelas, pode-se preencher o layout e realizar o dashboard, que segue no link do drive:
-https://drive.google.com/drive/u/0/folders/1tL3c-TI7jnJbXgjPr3o9DllFtkxckiYA ou através do link público:  https://app.powerbi.com/view?r=eyJrIjoiNDE0NzkwZTctYTk3OS00ZTMwLThlOTctYzQ5NjU5M2QxNjY1IiwidCI6Ijg1MDA4MzQ1LWRhNTMtNGJjYy1iMzc3LWU1NTFjM2FhMDllZSJ9 
+So, with the metrics and calculations from the other tables, you can fill out the layout and make the dashboard, which follows at the drive link:
+https://drive.google.com/drive/u/0/folders/1tL3c-TI7jnJbXgjPr3o9DllFtkxckiYA or via the public link: https://app.powerbi.com/view?r=eyJrIjoiNDE0NzkwZTctYTk3OS00ZTMwLThlOTctYzQ5NjU5M2QxNjY1IiwidCI6Ijg1MDA4MzQ1LWRhNTMtNGJjYy1iMzc3LWU1NTFjM2FhMDllZSJ9 
 
-# Conclusões
+# Conclusions
 
-• **Total de inscritos de 2 milhões, com mais da metade dos participantes ausentes (55,06%)**
+- **Total enrollment of 2 million, with more than half of the participants absent (55.06%)**
 
-• **A média geral do ENEM 2020 foi 523.95 e as notas de CN, CH, linguagens, matemática e redação são 490.45, 511.27, 523.89, 520.72 e 573.41 respectivamente**
+- **The overall average score for ENEM 2020 was 523.95 and the scores for CN, CH, languages, math, and writing are 490.45, 511.27, 523.89, 520.72, and 573.41 respectively**
 
-• **O perfil para alunos que tiveram nota média menor que a média geral varia muito**
+- **The profile for students who scored lower than the overall average varies widely**.
 
-• **Os 3 estados com maiores inscrições são São Paulo, Minas Gerais e Bahia**
+- **The 3 states with the highest enrollments are São Paulo, Minas Gerais and Bahia**.
 
-• **A maior nota geral foi 851.0, sendo este estudante do Ceará**
+- **The highest overall score was 851.0, with this student from Ceará**
 
-• **O Colégio Estadual Landulfo Alves De Almeida é o colégio com maior média do Brasil tendo o valor de 748.50, sendo este da Bahia**
+- **The Colégio Estadual Landulfo Alves De Almeida is the school with the highest average in Brazil, with a score of 748.50, from Bahia**
 
-• **As regiões que possuem um maior número de participações no ranking das 10 melhores escolas, são Sudeste e Nordeste, com 4 escolas cada** 
+- **The regions with the largest number of schools in the top 10 are the Southeast and the Northeast, with 4 schools each**. 
 
-• **Em Alagoas, o ranking das melhores alunos por disciplina é composto pelas notas: 805.2, 824.9, 725.6, 975 e 1000 das matérias CN, CH, linguagens, matemática e redação respectivamente, já para a maior média de AL, se trata de 815.1** 
+- **In Alagoas, the ranking of the best students by subject is composed of the following scores: 805.2, 824.9, 725.6, 975 and 1000 of the subjects CN, CH, languages, mathematics and writing, respectively. 
 
-• **As regiões que possuem um maior número de participações no ranking das 10 melhores escolas, são Sudeste e Nordeste, com 4 escolas cada** 
+- **The regions with the greatest number of schools in the top 10 are the Southeast and Northeast, with 4 schools each** 
 
 
-## Referência
+## Reference
 
-JUNIOR, C. Banco de dados MariaDB e MySQL: vantagens e desvantagens. Porto Fácil. 2021. Disponível em:<https://www.portofacil.net/banco-de-dados-mariadb-e-mysql.html> Acesso em: 17 de Outubro de 2022 
+JUNIOR, C. Banco de dados MariaDB e MySQL: vantagens e desvantagens. Porto Fácil. 2021. Available at:<https://www.portofacil.net/banco-de-dados-mariadb-e-mysql.html> Acesso em: 17 de Outubro de 2022 
