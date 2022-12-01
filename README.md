@@ -6,7 +6,6 @@ The National High School Exam (Enem) was instituted in 1998 by the Brazilian Min
  
 For more information: https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem.
 
-
 In this project, the goal was the **Analysis of the microdata from the National High School Exam (ENEM)** of each participant, for the 2020 edition.
 
 Soon, the data were made available, along with their dictionary, which can be seen in the *Data* folder at the link:  [https://docs.google.com/document/d/1UtS5hPXzrH77_KHT8RneRkpiqHiu1iR9KWb9QuQS3MI/edit](https://drive.google.com/drive/u/0/folders/1tL3c-TI7jnJbXgjPr3o9DllFtkxckiYA) 
@@ -36,12 +35,13 @@ For this, the following conditions were requested:
 
 **1.Use of DAX Functions**
 
-**2.Documentation of the measurements
+**2.Documentation of the measurements**
 
 **3.ETL**
 
 **4.Dimensional modeling of the data**
-# 1. reading the data
+
+# 1. Reading the data
 
 Because it is a database of 1.8 gb approximately, it is necessary to read the data in a way that does not use so much ram memory, since the machine used has only 4 GB of ram. 
 
@@ -153,7 +153,7 @@ Metrics necessary for the realization of the Dashboard are made:
 So, with the metrics and calculations from the other tables, you can fill out the layout and make the dashboard, which follows at the drive link:
 https://drive.google.com/drive/u/0/folders/1tL3c-TI7jnJbXgjPr3o9DllFtkxckiYA or via the public link: https://app.powerbi.com/view?r=eyJrIjoiNDE0NzkwZTctYTk3OS00ZTMwLThlOTctYzQ5NjU5M2QxNjY1IiwidCI6Ijg1MDA4MzQ1LWRhNTMtNGJjYy1iMzc3LWU1NTFjM2FhMDllZSJ9 
 
-# Conclusions
+# 5. Conclusions
 
 - **Total enrollment of 2 million, with more than half of the participants absent (55.06%)**
 
