@@ -20,17 +20,17 @@ Perform an analysis of the microdata from ENEM 2020, in order to be able to answ
 
 **1.Which school has the highest average score?**
 
-**Which student has the highest average score and the value of this average?
+**2.Which student has the highest average score and the value of this average?
 
-**What is the GPA?
+**3.What is the GPA?**
 
-**What is the % of absentees?
+**4.What is the % of absentees?**
 
-**What is the % of Absentees?** 5.
+**5.What is the % of Absentees?** 
 
-**What is the ranking of the best students in Alagoas by discipline?
+**6.What is the ranking of the best students in Alagoas by discipline?**
 
-**What is the profile of the students with below average grades? Describe by sex, ethnicity, age group.
+**7.What is the profile of the students with below average grades? Describe by sex, ethnicity, age group.**
 
 For this, the following conditions were requested:
 
