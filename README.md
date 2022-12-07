@@ -173,7 +173,18 @@ https://drive.google.com/drive/u/0/folders/1tL3c-TI7jnJbXgjPr3o9DllFtkxckiYA or 
 
 - **The regions with the greatest number of schools in the top 10 are the Southeast and Northeast, with 4 schools each** 
 
+# 6. 'Plus' conclusions
 
+Some analysis was done in order to gain insights on how race and ethnicity play an important role in the score of this edition of ENEM.
+
+This section was called 'plus', because it was not prescribed at the beginning of the project but when an analysis was done on this data some conclusions were generated, which were:
+
+- **Among the top scores in Brazil, only one indigenous person was identified in position 115**.
+
+- **Among the best grades in Brazil, there was not a single black person in the top 70**.
+
+- **Of the top 10 Brazilian grades, 90% (n=9) were men, while for the top 100, 70% (n=70) were men.
+- 
 ## Reference
 
 JUNIOR, C. Banco de dados MariaDB e MySQL: vantagens e desvantagens. Porto Fácil. 2021. Available at:<https://www.portofacil.net/banco-de-dados-mariadb-e-mysql.html> Acesso em: 17 de Outubro de 2022 
