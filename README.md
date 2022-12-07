@@ -19,7 +19,7 @@ Perform an analysis of the microdata from ENEM 2020, in order to be able to answ
 
 **1.Which school has the highest average score?**
 
-**2.Which student has the highest average score and the value of this average?
+**2.Which student has the highest average score and the value of this average?**
 
 **3.What is the GPA?**
 
