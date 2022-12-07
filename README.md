@@ -8,10 +8,6 @@ For more information: https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e
 
 In this project, the goal was the **Analysis of the microdata from the National High School Exam (ENEM)** of each participant, for the 2020 edition.
 
-Soon, the data were made available, along with their dictionary, which can be seen in the *Data* folder at the link:  [https://docs.google.com/document/d/1UtS5hPXzrH77_KHT8RneRkpiqHiu1iR9KWb9QuQS3MI/edit](https://drive.google.com/drive/u/0/folders/1tL3c-TI7jnJbXgjPr3o9DllFtkxckiYA) 
-
-Also, all the files used in the project are at the link above
-
 # Project focus
 
 Perform an analysis of the microdata from ENEM 2020, in order to be able to answer the following questions:
