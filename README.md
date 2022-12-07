@@ -190,4 +190,5 @@ This section was called 'plus', because it was not prescribed at the beginning o
 
 ## Reference
 
-JUNIOR, C. Banco de dados MariaDB e MySQL: vantagens e desvantagens. Porto Fácil. 2021. Available at:<https://www.portofacil.net/banco-de-dados-mariadb-e-mysql.html> Acesso em: 17 de Outubro de 2022 
+JUNIOR, C. Banco de dados MariaDB e MySQL: vantagens e desvantagens. Porto Fácil. 2021. Available at:<https://www.portofacil.net/banco-de-dados-mariadb-e-mysql.html> Acessed at: 17 de Outubro de 2022 
+
