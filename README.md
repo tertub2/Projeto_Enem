@@ -108,9 +108,9 @@ The third, is the table that presents the average of the best schools, in terms 
 After these queries, the data are imported into the BI using the MySQL option
 ![image](https://user-images.githubusercontent.com/88055274/196253044-7c117aff-23c1-4c40-9cf8-d5d032c7e9ac.png)
 
-# 3. database modeling
+# 3. Database modeling
 
-Modeling is in the modeling part of Power BI, due to the ease of it, this: 
+The modeling was performed in the modeling area of Power BI itself due to its ease, the chart can be seen:
 ![image](https://user-images.githubusercontent.com/88055274/196253765-55487df5-370a-4584-8660-8c9d1274fbd2.png)
 
 The relationship with the table Enrolled by State is done through the Federative Unit:
