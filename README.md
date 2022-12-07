@@ -2,11 +2,18 @@
 
 ![image](https://user-images.githubusercontent.com/88055274/196243128-97ec51c4-e6f8-4434-be82-853647c3ad32.png)
 
-The National High School Exam (Enem) was instituted in 1998 by the Brazilian Ministry of Education to evaluate the performance of students at the end of basic education. In 2009, the exam improved its methodology and began to be used as a mechanism for access to higher education, which can be used for admission to universities throughout the country and even to universities abroad.
- 
-For more information: https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem.
+The Enem has a test model organized into four areas of knowledge and an essay. It is divided in two tests held on two consecutive Sundays
+Day 1
+Humanities and its Technologies (History, Geography, Philosophy and Sociology)
+Languages, Codes and their Technologies (Portuguese, Literature, Arts, and Foreign Language - English or Spanish)
+Writing (Dissertative-argumentative)
 
-In this project, the goal was the **Analysis of the microdata from the National High School Exam (ENEM)** of each participant, for the 2020 edition.
+Day 2
+Mathematics and its Technologies (Mathematics)
+Nature Sciences and its Technologies (Chemistry, Physics and Biology)
+For more information about ENEM: https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem.
+
+It may seem like a ton of information but it's not that complicated, take your time with the project 😊
 
 # Project focus
 
